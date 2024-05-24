@@ -1,14 +1,7 @@
-
 #Spell checker
-#Sreyanth Akella 002341544
-#Tasks:
+#Task Order:
 # Data cleaning
 # Corpus Preparation
-# Deletion
-# Replacement
-# Transposition
-# Insertion
-
 
 #import needed modules
 import os
@@ -20,7 +13,7 @@ import re
 import time
 nltk.download('punkt')
 
-#We start timer as soon as modules are loaded
+#We start the timer when modules are loaded to check performance
 start = time.time()
 
 #Load the corpus
@@ -29,8 +22,8 @@ file = open(filename, 'rt')
 corpus = file.read()
 file.close()
 
-#1)We will clean the corpus using regular expressions
-#2)We tokenize the words using word tokenizer from NLTK.
+#1 We will clean the corpus using regular expressions
+#2 We tokenize the words using word tokenizer from NLTK.
 tokens = corpus
 tokens = re.compile("[^a-zA-Z'-]")
 tokens = word_tokenize(corpus)
@@ -44,12 +37,8 @@ corpus_words = [word.lower() for word in final_tokens]
 
 
 
-
-
-#calculate frequencies using Counter from collections
+#calculate frequencies using Counter dictionary from collections
 corpus_words = Counter(corpus_words)
-
-
 
 
 #Spell checker function
@@ -118,12 +107,7 @@ output.write(final_sentence)
 output.close()
 print("Output has been saved to file 'output.txt'")
 
-#documenting the time it took to run
+#Checking run time for performance
 stop = time.time()
 Total_Time = stop-start
 print("Total time taken for execution(in seconds) is:",Total_Time)
-
-
-
-
-
