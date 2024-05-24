@@ -20,4 +20,5 @@ Run the program with python Spellchecker.py
 ![image](https://github.com/Sreyanth99/Python-Spelling-Correction/assets/6060592/78a4dc95-bb59-4f55-8c12-da614e768f5e)
 
 Output
+
 ![image](https://github.com/Sreyanth99/Python-Spelling-Correction/assets/6060592/2f6e8e99-d331-4ca3-9a42-31492371dfeb)
